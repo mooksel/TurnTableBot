@@ -4,13 +4,13 @@ token = "513777236:AAGznaDind0_iIelgAnguG6cgJ3_22E71ZY"
 bot = telebot.TeleBot(token)
 
 '''
-shrug - Shrugs.
-turn_table - Turns table.
-take_my_energy - Gives you energy.
-lenny - Lenny.
-chlen - Visits your mama.
-disapproval - Make me unsee it!
-'''
+	shrug - Shrugs.
+	turn_table - Turns table.
+	take_my_energy - Gives you energy.
+	lenny - Lenny.
+	chlen - Visits your mama.
+	disapproval - Make me unsee it!
+	'''
 
 @bot.message_handler(commands=['shrug'])
 def handle_shrug(message):
@@ -40,6 +40,10 @@ def handle_turn_table(message):
 
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
+	if "три сотни" in message.text:
+		bot.send_message(message.chat.id, "Отсоси у программиста")
+	if message.text.endswith("300") or message.text.endswith("триста"):
+		bot.send_message(message.chat.id, "Отсоси у программиста")
 	if message.text.endswith("влад") or message.text.endswith("Влад"):
 		bot.send_message(message.chat.id, "ебал томат")
 	if message.text.endswith("дима") or message.text.endswith("Дима") or message.text.endswith("Димасик") or message.text.endswith("димасик"):

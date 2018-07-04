@@ -4,13 +4,14 @@ token = "513777236:AAGznaDind0_iIelgAnguG6cgJ3_22E71ZY"
 bot = telebot.TeleBot(token)
 
 '''
-	shrug - Shrugs.
-	turn_table - Turns table.
-	take_my_energy - Gives you energy.
-	lenny - Lenny.
-	chlen - Visits your mama.
-	disapproval - Make me unsee it!
-	'''
+shrug - Shrugs.
+turn_table - Turns table.
+take_my_energy - Gives you energy.
+lenny - Lenny.
+chlen - Visits your mama.
+jewish_chlen - Very small penis. Visits your dad.
+disapproval - Make me unsee it!
+'''
 
 @bot.message_handler(commands=['shrug'])
 def handle_shrug(message):
@@ -32,6 +33,10 @@ def handle_turn_table(message):
 @bot.message_handler(commands=['chlen'])
 def handle_turn_table(message):
 	bot.send_message(message.chat.id, "8========3")
+	
+@bot.message_handler(commands=['jewish_chlen'])
+def handle_turn_table(message):
+	bot.send_message(message.chat.id, "8⁍")
 
 @bot.message_handler(commands=['disapproval'])
 def handle_turn_table(message):

@@ -11,6 +11,7 @@ lenny - Lenny.
 chlen - Visits your mama.
 jewish_chlen - Very small penis. Visits your dad.
 disapproval - Make me unsee it!
+gde_leha - Find Leha!
 '''
 
 @bot.message_handler(commands=['shrug'])
@@ -33,7 +34,7 @@ def handle_turn_table(message):
 @bot.message_handler(commands=['chlen'])
 def handle_turn_table(message):
 	bot.send_message(message.chat.id, "8========3")
-	
+
 @bot.message_handler(commands=['jewish_chlen'])
 def handle_turn_table(message):
 	bot.send_message(message.chat.id, "8⁍")
@@ -41,6 +42,10 @@ def handle_turn_table(message):
 @bot.message_handler(commands=['disapproval'])
 def handle_turn_table(message):
 	bot.send_message(message.chat.id, "ಠ_ಠ")
+
+@bot.message_handler(commands=['gde_leha'])
+def handle_turn_table(message):
+	bot.send_message(message.chat.id, "Я не чувствую Леху...")
 
 
 @bot.message_handler(content_types=['text'])

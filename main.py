@@ -6,20 +6,26 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['shrug'])
 def handle_shrug(message):
-    bot.send_message(message.chat.id, "¯\_(ツ)_/¯")
+	bot.send_message(message.chat.id, "¯\_(ツ)_/¯")
 
 
 @bot.message_handler(commands=['turn_table'])
 def handle_turn_table(message):
-    bot.send_message(message.chat.id, "(╯°□°）╯︵ ┻━┻")
+	bot.send_message(message.chat.id, "(╯°□°）╯︵ ┻━┻")
+
+@bot.message_handler(commands=['take_my_energy'])
+def handle_turn_table(message):
+	bot.send_message(message.chat.id, "༼ つ ◕_◕ ༽つ")
 
 
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
-    if message.text.endswith("пидор"):
-        bot.send_message(message.chat.id, "Сам пидор")
-    elif "бля" in message.text or "сука" in message.text:
-        bot.send_message(message.chat.id, "И этими губами ты целуешь свою маму?")
+	if message.text.endswith("мразота") or message.text == "иди нахуй":
+		bot.send_message(message.chat.id, "Проверяй за щекой")
+	if message.text.endswith("пидор"):
+		bot.send_message(message.chat.id, "Сам пидор")
+	elif "бля" in message.text or "сука" in message.text:
+		bot.send_message(message.chat.id, "И этими губами ты целуешь свою маму?")
 
 
 bot.polling(none_stop=True, interval=0)

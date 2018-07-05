@@ -12,12 +12,13 @@ chlen - Visits your mama.
 jewish_chlen - Very small penis. Visits your dad.
 disapproval - Make me unsee it!
 gde_leha - Find Leha!
+leha_tut - Found Leha.
+shut_up - Rage!
 '''
 
 @bot.message_handler(commands=['shrug'])
 def handle_shrug(message):
 	bot.send_message(message.chat.id, "¯\_(ツ)_/¯")
-
 
 @bot.message_handler(commands=['turn_table'])
 def handle_turn_table(message):
@@ -47,6 +48,14 @@ def handle_turn_table(message):
 def handle_turn_table(message):
 	bot.send_message(message.chat.id, "Я не чувствую Леху...")
 
+@bot.message_handler(commands=['leha_tut'])
+def handle_turn_table(message):
+	bot.send_message(message.chat.id, "┬┴┬┴┤(･_├┬┴┬┴")
+
+@bot.message_handler(commands=['shut_up'])
+def handle_turn_table(message):
+	bot.send_message(message.chat.id, "(ノಠ益ಠ)ノ彡┻━┻")
+
 
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
@@ -56,6 +65,8 @@ def handle_text(message):
 		bot.send_message(message.chat.id, "Отсоси у программиста")
 	if message.text.endswith("влад") or message.text.endswith("Влад"):
 		bot.send_message(message.chat.id, "ебал томат")
+	if "костя" in message.text or "Костя" in message.text:
+		bot.send_message(message.chat.id, "не кошерный")
 	if message.text.endswith("дима") or message.text.endswith("Дима") or message.text.endswith("Димасик") or message.text.endswith("димасик"):
 		bot.send_message(message.chat.id, "пьет пивасик")
 	if message.text.endswith("алексей") or message.text.endswith("Алексей"):

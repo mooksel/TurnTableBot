@@ -64,6 +64,8 @@ def handle_text(message):
 		bot.send_message(message.chat.id, "Проверяй за щекой")
 	if message.text.endswith("пидор"):
 		bot.send_message(message.chat.id, "Сам пидор")
+	if message.text.endswith("Димооон") or message.text.endswith("димооон"c or message.text.endswith("DIMOOON") or message.text.endswith("Dimoon"):
+		bot.send_message(message.chat.id, "ТУДУДУДУДУДУДУДУДУ ТУДУДУ ТУДУ ТУ ТУДУДУ")
 	if message.text.endswith("леха") or message.text.endswith("Леха"):
 		bot.send_message(message.chat.id, "Лепеха")
 	if "бля" in message.text or "сука" in message.text:
